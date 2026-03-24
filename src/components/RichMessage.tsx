@@ -57,7 +57,7 @@ export default function RichMessage({ text }: RichMessageProps) {
       
       {imageUrl && (
         <div className="mt-3 rounded-2xl overflow-hidden shadow-2xl border border-white/10 group bg-black/40 max-w-[90%]">
-          <img src={imageUrl} alt="Attached" className="max-w-full h-auto max-h-[350px] hover:scale-[1.03] transition-transform duration-700 cursor-pointer object-cover" />
+          <img src={imageUrl} alt="Изображение" className="max-w-full h-auto max-h-[350px] hover:scale-[1.03] transition-transform duration-700 cursor-pointer object-cover" />
         </div>
       )}
     </div>

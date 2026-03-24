@@ -61,8 +61,8 @@ export default function RegisterPage() {
           >
             <UserPlus size={40} className="text-white" />
           </motion.div>
-          <h1 className="text-4xl font-black bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent tracking-tight uppercase">Join Vibe</h1>
-          <p className="text-muted-foreground mt-3 text-sm font-medium opacity-60 uppercase tracking-widest">Create Your Digital Alias</p>
+          <h1 className="text-4xl font-black bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent tracking-tight uppercase">Присоединяйся к Vibe</h1>
+          <p className="text-muted-foreground mt-3 text-sm font-medium opacity-60 uppercase tracking-widest">Создай свой цифровой псевдоним</p>
         </div>
 
         <AnimatePresence>
@@ -81,7 +81,7 @@ export default function RegisterPage() {
 
         <form onSubmit={handleSubmit} className="space-y-5">
            <div className="space-y-2 group">
-            <label className="block text-[10px] font-black text-muted-foreground uppercase tracking-[0.2em] ml-1">Nickname</label>
+            <label className="block text-[10px] font-black text-muted-foreground uppercase tracking-[0.2em] ml-1">Никнейм</label>
             <div className="relative overflow-hidden rounded-2xl border border-white/5 bg-white/5 focus-within:border-primary/50 transition-all">
               <User className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground group-focus-within:text-primary transition-colors" size={18} />
               <input
@@ -89,14 +89,14 @@ export default function RegisterPage() {
                 value={nickname}
                 onChange={(e) => setNickname(e.target.value)}
                 className="w-full bg-transparent px-12 py-4 text-foreground focus:outline-none font-medium placeholder:text-muted-foreground/30 transition-all"
-                placeholder="CyberNinja"
+                placeholder="Ниндзя"
                 required
               />
             </div>
           </div>
 
           <div className="space-y-2 group">
-            <label className="block text-[10px] font-black text-muted-foreground uppercase tracking-[0.2em] ml-1">Email</label>
+            <label className="block text-[10px] font-black text-muted-foreground uppercase tracking-[0.2em] ml-1">Почта</label>
             <div className="relative overflow-hidden rounded-2xl border border-white/5 bg-white/5 focus-within:border-primary/50 transition-all">
               <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground group-focus-within:text-primary transition-colors" size={18} />
               <input
@@ -104,14 +104,14 @@ export default function RegisterPage() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full bg-transparent px-12 py-4 text-foreground focus:outline-none font-medium placeholder:text-muted-foreground/30 transition-all"
-                placeholder="ninja@vibe.net"
+                placeholder="vibe@messenger.ru"
                 required
               />
             </div>
           </div>
           
           <div className="space-y-2 group">
-            <label className="block text-[10px] font-black text-muted-foreground uppercase tracking-[0.2em] ml-1">Master Key</label>
+            <label className="block text-[10px] font-black text-muted-foreground uppercase tracking-[0.2em] ml-1">Мастер-ключ</label>
             <div className="relative overflow-hidden rounded-2xl border border-white/5 bg-white/5 focus-within:border-primary/50 transition-all">
               <Lock className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground group-focus-within:text-primary transition-colors" size={18} />
               <input
@@ -135,26 +135,26 @@ export default function RegisterPage() {
               {loading ? (
                 <>
                   <div className="w-4 h-4 rounded-full border-2 border-indigo-500 border-t-transparent animate-spin" />
-                  INITIALIZING...
+                  ИНИЦИАЛИЗАЦИЯ...
                 </>
               ) : (
-                <>CREATE ACCOUNT <Sparkles size={16} /></>
+                <>СОЗДАТЬ АККАУНТ <Sparkles size={16} /></>
               )}
             </span>
           </button>
         </form>
 
         <div className="mt-8 text-center">
-          <p className="text-xs text-muted-foreground font-medium opacity-50 uppercase tracking-widest">Already identified?</p>
+          <p className="text-xs text-muted-foreground font-medium opacity-50 uppercase tracking-widest">Уже есть аккаунт?</p>
           <Link href="/login" className="inline-block mt-3 text-sm font-black text-white hover:text-indigo-400 transition-colors underline-offset-8 decoration-indigo-500/50 underline">
-            EXECUTE LOGIN
+            ВОЙТИ
           </Link>
         </div>
       </motion.div>
       
       {/* Decorative Text */}
-      <div className="fixed top-10 left-10 text-[100px] font-black text-white/5 leading-none select-none pointer-events-none uppercase">Join</div>
-      <div className="fixed bottom-10 right-10 text-[100px] font-black text-white/5 leading-none select-none pointer-events-none uppercase">Vibe</div>
+      <div className="fixed top-10 left-10 text-[100px] font-black text-white/5 leading-none select-none pointer-events-none uppercase">Вход</div>
+      <div className="fixed bottom-10 right-10 text-[100px] font-black text-white/5 leading-none select-none pointer-events-none uppercase">Вайб</div>
     </div>
   );
 }

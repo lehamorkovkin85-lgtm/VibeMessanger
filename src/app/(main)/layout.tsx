@@ -173,7 +173,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
                     {user.nickname}
                     {user.isVerified && <div className="text-blue-400 w-4 h-4 flex items-center justify-center bg-blue-400/10 rounded-full text-[10px]" title="Верифицирован">✓</div>}
                   </div>
-                  <div className="text-[10px] text-muted-foreground uppercase tracking-widest font-bold opacity-60">{user.role === 'admin' ? 'Контроль' : 'Статус: OK'}</div>
+                  <div className="text-[10px] text-muted-foreground uppercase tracking-widest font-bold opacity-60">{user.role === 'admin' ? 'Контроль' : 'Статус: В сети'}</div>
                 </div>
               </div>
               <button onClick={logout} className="p-2.5 text-muted-foreground hover:text-destructive hover:bg-destructive/10 rounded-xl transition-all active:scale-90" title="Выйти">

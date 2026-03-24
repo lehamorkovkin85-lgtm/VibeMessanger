@@ -61,7 +61,7 @@ export default function LoginPage() {
             <LogIn size={40} className="text-white" />
           </motion.div>
           <h1 className="text-4xl font-black bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent tracking-tight">VIBE MESSANGER</h1>
-          <p className="text-muted-foreground mt-3 text-sm font-medium opacity-60 uppercase tracking-widest">Digital Realm Awaits</p>
+          <p className="text-muted-foreground mt-3 text-sm font-medium opacity-60 uppercase tracking-widest">Цифровой мир ждет</p>
         </div>
 
         <AnimatePresence>
@@ -80,7 +80,7 @@ export default function LoginPage() {
 
         <form onSubmit={handleSubmit} className="space-y-5">
           <div className="space-y-2 group">
-            <label className="block text-[10px] font-black text-muted-foreground uppercase tracking-[0.2em] ml-1">Email Space</label>
+            <label className="block text-[10px] font-black text-muted-foreground uppercase tracking-[0.2em] ml-1">Электронная почта</label>
             <div className="relative overflow-hidden rounded-2xl border border-white/5 bg-white/5 focus-within:border-primary/50 transition-all">
               <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground group-focus-within:text-primary transition-colors" size={18} />
               <input
@@ -88,14 +88,14 @@ export default function LoginPage() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full bg-transparent px-12 py-4 text-foreground focus:outline-none font-medium placeholder:text-muted-foreground/30 transition-all"
-                placeholder="commander@earth.com"
+                placeholder="vibe@messenger.ru"
                 required
               />
             </div>
           </div>
           
           <div className="space-y-2 group">
-            <label className="block text-[10px] font-black text-muted-foreground uppercase tracking-[0.2em] ml-1">Security Key</label>
+            <label className="block text-[10px] font-black text-muted-foreground uppercase tracking-[0.2em] ml-1">Ключ безопасности</label>
             <div className="relative overflow-hidden rounded-2xl border border-white/5 bg-white/5 focus-within:border-primary/50 transition-all">
               <Lock className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground group-focus-within:text-primary transition-colors" size={18} />
               <input
@@ -123,23 +123,23 @@ export default function LoginPage() {
                   AUTH IN PROGRESS
                 </>
               ) : (
-                <>ENTER PORTAL <Sparkles size={16} /></>
+                <>ВОЙТИ В ПОРТАЛ <Sparkles size={16} /></>
               )}
             </span>
           </button>
         </form>
 
         <div className="mt-8 text-center">
-          <p className="text-xs text-muted-foreground font-medium opacity-50 uppercase tracking-widest">New to the vibe?</p>
+          <p className="text-xs text-muted-foreground font-medium opacity-50 uppercase tracking-widest">Впервые здесь?</p>
           <Link href="/register" className="inline-block mt-3 text-sm font-black text-white hover:text-primary transition-colors underline-offset-8 decoration-primary/50 underline">
-            GENERATE IDENTITY
+            СОЗДАТЬ АККАУНТ
           </Link>
         </div>
       </motion.div>
       
       {/* Decorative Text */}
-      <div className="fixed bottom-10 left-10 text-[100px] font-black text-white/5 leading-none select-none pointer-events-none uppercase">Vibe</div>
-      <div className="fixed top-10 right-10 text-[100px] font-black text-white/5 leading-none select-none pointer-events-none uppercase">Msg</div>
+      <div className="fixed bottom-10 left-10 text-[100px] font-black text-white/5 leading-none select-none pointer-events-none uppercase">Вайб</div>
+      <div className="fixed top-10 right-10 text-[100px] font-black text-white/5 leading-none select-none pointer-events-none uppercase">Чат</div>
     </div>
   );
 }
