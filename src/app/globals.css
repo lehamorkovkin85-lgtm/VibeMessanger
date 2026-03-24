@@ -1,0 +1,214 @@
+@import "tailwindcss";
+
+:root, [data-theme="vibe"] {
+  --background: #09080f;
+  --foreground: #f4f4f5;
+  --primary: #9d50ff;
+  --primary-glow: rgba(157, 80, 255, 0.4);
+  --primary-foreground: #ffffff;
+  --muted: #18181b;
+  --muted-foreground: #a1a1aa;
+  --border: rgba(157, 80, 255, 0.1);
+  --input: #18181b;
+  --ring: #9d50ff;
+  --destructive: #ef4444;
+  --destructive-foreground: #fafafa;
+  --radius: 1rem;
+}
+
+[data-theme="ocean"] {
+  --background: #020617;
+  --foreground: #f8fafc;
+  --primary: #0ea5e9;
+  --primary-glow: rgba(14, 165, 233, 0.4);
+  --primary-foreground: #ffffff;
+  --muted: #0f172a;
+  --muted-foreground: #94a3b8;
+  --border: rgba(14, 165, 233, 0.1);
+  --input: #0f172a;
+  --ring: #0ea5e9;
+}
+
+[data-theme="sunset"] {
+  --background: #1a0a0a;
+  --foreground: #fff5f5;
+  --primary: #f97316;
+  --primary-glow: rgba(249, 115, 22, 0.4);
+  --primary-foreground: #ffffff;
+  --muted: #2d1212;
+  --muted-foreground: #fdba74;
+  --border: rgba(249, 115, 22, 0.1);
+  --input: #2d1212;
+  --ring: #f97316;
+}
+
+[data-theme="forest"] {
+  --background: #021a12;
+  --foreground: #f0fdf4;
+  --primary: #10b981;
+  --primary-glow: rgba(16, 185, 129, 0.4);
+  --primary-foreground: #ffffff;
+  --muted: #064e3b;
+  --muted-foreground: #86efac;
+  --border: rgba(16, 185, 129, 0.1);
+  --input: #064e3b;
+  --ring: #10b981;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-glow: var(--primary-glow);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.6s cubic-bezier(0.4, 0, 0.2, 1), color 0.6s ease;
+  overflow-x: hidden;
+}
+
+/* Base Surfaces */
+.surface-panel {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* 1. Glassmorphism - Ultra High End */
+[data-style="glass"] .surface-panel {
+  background: color-mix(in srgb, var(--muted) 20%, transparent);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 
+    0 10px 40px -10px rgba(0, 0, 0, 0.5),
+    inset 0 1px 1px rgba(255, 255, 255, 0.05);
+}
+
+[data-style="glass"] .surface-panel::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
+
+/* 2. Neomorphism - Soft & Deep */
+[data-style="neomorph"] .surface-panel {
+  background: var(--background);
+  border: none;
+  box-shadow: 
+    12px 12px 24px rgba(0, 0, 0, 0.5),
+    -8px -8px 20px rgba(255, 255, 255, 0.02),
+    inset 1px 1px 0 rgba(255, 255, 255, 0.05);
+  border-radius: 2rem;
+}
+
+/* 3. Skeuomorphism - Tactical/Premium Metal */
+[data-style="skeuomorph"] .surface-panel {
+  background: linear-gradient(135deg, 
+    color-mix(in srgb, var(--muted) 80%, white 2%), 
+    color-mix(in srgb, var(--background) 95%, black));
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: 
+    0 15px 35px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 2px 5px rgba(0, 0, 0, 0.5);
+  border-bottom: 2px solid color-mix(in srgb, var(--border) 90%, black);
+}
+
+/* 4. Minimal - Starkly Sharp */
+[data-style="minimal"] .surface-panel {
+  background: transparent;
+  border: 1px solid var(--muted-foreground);
+  box-shadow: none;
+  border-radius: 0;
+}
+
+[data-style="minimal"] .surface-panel:hover {
+  border-color: var(--primary);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* Better Scrollbar for Windows */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.1); }
+::-webkit-scrollbar-thumb { 
+  background: color-mix(in srgb, var(--primary) 30%, transparent); 
+  border-radius: 10px;
+  border: 2px solid var(--background);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--primary); }
+
+/* Animation Overlays */
+.theme-glow {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle at center, var(--primary-glow) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+/* Animated Gradient BG */
+.animated-bg {
+  background-image: linear-gradient(-45deg, 
+    var(--background) 0%, 
+    color-mix(in srgb, var(--primary) 8%, var(--background)) 35%, 
+    var(--background) 70%,
+    color-mix(in srgb, var(--primary) 5%, var(--background)) 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; opacity: 0.8; }
+  50% { background-position: 100% 50%; opacity: 1; }
+  100% { background-position: 0% 50%; opacity: 0.8; }
+}
+
+/* Smooth Floating */
+.animate-float { 
+  animation: float 10s ease-in-out infinite; 
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(2deg); }
+}
+
+/* Interactive Elements Enhancements */
+button, .clickable {
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.2s ease;
+}
+
+button:active, .clickable:active {
+  transform: scale(0.96);
+}
+
+.item-hover:hover {
+  background: color-mix(in srgb, var(--primary) 10%, transparent);
+  transform: translateX(4px);
+}

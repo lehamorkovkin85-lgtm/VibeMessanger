@@ -1,0 +1,106 @@
+{
+  "users": [
+    {
+      "id": "f4c38a63-e596-41bb-9d9f-e2e9e51d24e2",
+      "nickname": "KiselOK",
+      "email": "lehamorkovkin85@gmail.com",
+      "passwordHash": "HoRiZoN888",
+      "isBanned": false,
+      "isVerified": true,
+      "role": "admin",
+      "createdAt": "2026-03-22T18:37:09.427Z"
+    },
+    {
+      "id": "44be0482-9352-4d6a-b71c-246a357d940a",
+      "nickname": "broo",
+      "email": "asdsad@gmail.com",
+      "passwordHash": "HoRiZoN888",
+      "isBanned": false,
+      "isVerified": false,
+      "role": "user",
+      "createdAt": "2026-03-22T18:41:04.834Z"
+    }
+  ],
+  "friendships": [
+    {
+      "id": "a5afe26d-de4e-4c92-963d-ac4c7a1321b6",
+      "requesterId": "44be0482-9352-4d6a-b71c-246a357d940a",
+      "receiverId": "f4c38a63-e596-41bb-9d9f-e2e9e51d24e2",
+      "status": "accepted",
+      "createdAt": "2026-03-22T18:41:11.578Z"
+    }
+  ],
+  "messages": [
+    {
+      "id": "981758ef-63d7-4665-856b-3930b98146a4",
+      "senderId": "f4c38a63-e596-41bb-9d9f-e2e9e51d24e2",
+      "receiverId": "44be0482-9352-4d6a-b71c-246a357d940a",
+      "text": "ку",
+      "createdAt": "2026-03-22T18:41:23.906Z"
+    },
+    {
+      "id": "e53aeff4-051c-47e6-9560-003e7dc05a4f",
+      "senderId": "f4c38a63-e596-41bb-9d9f-e2e9e51d24e2",
+      "receiverId": "44be0482-9352-4d6a-b71c-246a357d940a",
+      "text": "хей",
+      "createdAt": "2026-03-22T18:41:25.229Z"
+    },
+    {
+      "id": "fa85d98a-00ba-46b3-a9c6-d06d89dfa643",
+      "senderId": "f4c38a63-e596-41bb-9d9f-e2e9e51d24e2",
+      "receiverId": "44be0482-9352-4d6a-b71c-246a357d940a",
+      "text": "ехййййййййййййййййййййййййййййййййййййй",
+      "createdAt": "2026-03-22T18:41:27.392Z"
+    },
+    {
+      "id": "6526dcaf-3686-4276-9a25-7af0dbc1a3eb",
+      "senderId": "f4c38a63-e596-41bb-9d9f-e2e9e51d24e2",
+      "receiverId": "44be0482-9352-4d6a-b71c-246a357d940a",
+      "text": "оываг89гцувкшнрщкцщнш89г7щшкц897щк9шцн87гншщкц897шщцн789кгцкгщн8ш9нщкцшгцкншщгшщкнщшкнгагщцншкашщнакцшщнцкащвщв7цы",
+      "createdAt": "2026-03-22T18:41:32.836Z"
+    },
+    {
+      "id": "2e3359ec-9b22-40c7-940c-cfd0c2b75fdd",
+      "senderId": "f4c38a63-e596-41bb-9d9f-e2e9e51d24e2",
+      "receiverId": "44be0482-9352-4d6a-b71c-246a357d940a",
+      "text": "🫠🫠🫠🫠",
+      "createdAt": "2026-03-22T18:44:24.016Z"
+    },
+    {
+      "id": "0b72d727-183d-4c77-abe5-c3f6b8dac22b",
+      "senderId": "f4c38a63-e596-41bb-9d9f-e2e9e51d24e2",
+      "receiverId": "44be0482-9352-4d6a-b71c-246a357d940a",
+      "text": "💀",
+      "createdAt": "2026-03-22T18:44:48.710Z"
+    },
+    {
+      "id": "df77a82f-cfbc-4c86-8796-c5f175381007",
+      "senderId": "f4c38a63-e596-41bb-9d9f-e2e9e51d24e2",
+      "receiverId": "44be0482-9352-4d6a-b71c-246a357d940a",
+      "text": "🙍‍♀️🙍‍♀️🙍‍♀️🧏🏿🙎🧏",
+      "createdAt": "2026-03-22T18:46:06.877Z"
+    },
+    {
+      "id": "a3c9df5f-9c8a-45c8-810a-e6a8f3cbc2e9",
+      "senderId": "f4c38a63-e596-41bb-9d9f-e2e9e51d24e2",
+      "receiverId": "44be0482-9352-4d6a-b71c-246a357d940a",
+      "text": "куу",
+      "createdAt": "2026-03-22T18:49:28.405Z"
+    },
+    {
+      "id": "c80055e3-4a16-4a77-8af7-a3dac98d902d",
+      "senderId": "f4c38a63-e596-41bb-9d9f-e2e9e51d24e2",
+      "receiverId": "44be0482-9352-4d6a-b71c-246a357d940a",
+      "text": "куу",
+      "createdAt": "2026-03-22T18:49:30.204Z"
+    },
+    {
+      "id": "e2eac1f1-6e40-4a5d-99da-801100fd9461",
+      "senderId": "f4c38a63-e596-41bb-9d9f-e2e9e51d24e2",
+      "receiverId": "44be0482-9352-4d6a-b71c-246a357d940a",
+      "text": "🧏🏿🙎",
+      "createdAt": "2026-03-22T19:03:17.957Z"
+    }
+  ],
+  "channels": []
+}
