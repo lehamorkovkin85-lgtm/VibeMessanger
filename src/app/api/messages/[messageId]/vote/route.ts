@@ -1,8 +1,8 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { voteInPoll } from '@/lib/firestoreDb';
 import { getSessionUserId } from '@/lib/session';
 
-export async function POST(req: Request, { params }: { params: Promise<{ messageId: string }> }) {
+export async function POST(req: NextRequest, { params }: { params: Promise<{ messageId: string }> }) {
   try {
     const userId = await getSessionUserId();
     if (!userId) return NextResponse.json({ error: 'Необходима авторизация' }, { status: 401 });

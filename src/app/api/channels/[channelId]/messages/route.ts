@@ -1,14 +1,14 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { getChannelMessages, getChannelById, createMessage } from '@/lib/firestoreDb';
 import { getSessionUserId } from '@/lib/session';
 
-export async function GET(req: Request, { params }: { params: Promise<{ channelId: string }> }) {
+export async function GET(req: NextRequest, { params }: { params: Promise<{ channelId: string }> }) {
   const { channelId } = await params;
   const messages = await getChannelMessages(channelId);
   return NextResponse.json({ messages });
 }
 
-export async function POST(req: Request, { params }: { params: Promise<{ channelId: string }> }) {
+export async function POST(req: NextRequest, { params }: { params: Promise<{ channelId: string }> }) {
   try {
     const { channelId } = await params;
     const userId = await getSessionUserId();

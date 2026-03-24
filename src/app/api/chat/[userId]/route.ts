@@ -1,8 +1,8 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { getMessagesBetweenUsers, createMessage, getUserById, getFriendshipsForUser } from '@/lib/firestoreDb';
 import { getSessionUserId } from '@/lib/session';
 
-export async function GET(req: Request, { params }: { params: Promise<{ userId: string }> }) {
+export async function GET(req: NextRequest, { params }: { params: Promise<{ userId: string }> }) {
   try {
     const userId = await getSessionUserId();
     if (!userId) return NextResponse.json({ error: 'Не авторизован' }, { status: 401 });
@@ -27,7 +27,7 @@ export async function GET(req: Request, { params }: { params: Promise<{ userId: 
   }
 }
 
-export async function POST(req: Request, { params }: { params: Promise<{ userId: string }> }) {
+export async function POST(req: NextRequest, { params }: { params: Promise<{ userId: string }> }) {
   try {
     const userId = await getSessionUserId();
     if (!userId) return NextResponse.json({ error: 'Не авторизован' }, { status: 401 });
